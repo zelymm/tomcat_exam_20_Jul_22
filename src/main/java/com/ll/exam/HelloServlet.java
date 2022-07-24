@@ -12,9 +12,9 @@ import java.io.IOException;
 public class HelloServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        req.setCharacterEncoding("UTF-8");
-        resp.setCharacterEncoding("UTF-8");
-        resp.setContentType("text/html; charset=utf-8");
-        resp.getWriter().append("HelloServlet");
+        req.setCharacterEncoding("UTF-8"); //Interpret the incoming data as UTF-8
+        resp.setCharacterEncoding("UTF-8"); //Set the encoding of the completed HTML to UTF-8
+        resp.setContentType("text/html; charset=utf-8");  //Notify the browser that the output of this system is UTF-8
+        resp.getWriter().append("HelloServlet -!-");
     }
 }
